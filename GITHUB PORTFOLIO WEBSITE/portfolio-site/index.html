@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Irene Ufuoma Ayakazi — Data Scientist · Healthcare Analytics &amp; ML</title>
+<meta name="description" content="Irene Ufuoma Ayakazi — data scientist specializing in healthcare analytics, explainable machine learning, and executive BI reporting.">
+
+<!--
+  ============================================================
+  Personalized for Irene Ufuoma Ayakazi (Irene_Data_Hub).
+  If your live app or GitHub repo URL ever changes, search for
+  "EDIT:" comments below to update those links.
+  ============================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:        #10182B;
+    --ink-soft:   #2A3247;
+    --paper:      #F6F4EF;
+    --paper-deep: #EFEAE0;
+    --card:       #FFFFFF;
+    --line:       #DBD5C7;
+    --line-dark:  rgba(246,244,239,0.14);
+    --teal:       #1B6E6E;
+    --teal-deep:  #0F4C4C;
+    --coral:      #E4572E;
+    --blue:       #3B6EA5;
+    --slate:      #5B6472;
+
+    --display: 'Newsreader', Georgia, serif;
+    --body: 'IBM Plex Sans', -apple-system, sans-serif;
+    --mono: 'IBM Plex Mono', 'Courier New', monospace;
+
+    --max: 1180px;
+    --gutter: clamp(20px, 5vw, 64px);
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; }
+  }
+
+  body{
+    font-family:var(--body);
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; }
+
+  :focus-visible{
+    outline:2px solid var(--teal);
+    outline-offset:3px;
+  }
+
+  .wrap{ max-width:var(--max); margin:0 auto; padding-left:var(--gutter); padding-right:var(--gutter); }
+
+  /* ---------- eyebrow / labels ---------- */
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:0.72rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--teal-deep);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:18px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:7px; height:7px;
+    background:var(--coral);
+    border-radius:50%;
+    flex:none;
+  }
+  .eyebrow.on-dark{ color:#8FD1C7; }
+  .eyebrow.on-dark::before{ background:var(--coral); }
+
+  /* ---------- nav ---------- */
+  header.site-nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(246,244,239,0.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:18px; padding-bottom:18px;
+  }
+  .nav-mark{
+    display:flex; align-items:center; gap:10px;
+    font-family:var(--mono); font-weight:600; letter-spacing:0.02em;
+    font-size:0.95rem;
+    text-decoration:none;
+  }
+  .nav-mark svg{ flex:none; }
+  .nav-links{
+    display:flex; align-items:center; gap:clamp(16px,3vw,34px);
+    list-style:none;
+    font-family:var(--mono);
+    font-size:0.82rem;
+    letter-spacing:0.02em;
+  }
+  .nav-links a{
+    text-decoration:none;
+    color:var(--ink-soft);
+    padding-bottom:2px;
+    border-bottom:1px solid transparent;
+    transition:border-color .18s ease, color .18s ease;
+  }
+  .nav-links a:hover{ color:var(--ink); border-color:var(--coral); }
+  .nav-links .btn-github{
+    color:var(--paper);
+    background:var(--ink);
+    padding:8px 16px;
+    border-radius:3px;
+    border-bottom:none;
+  }
+  .nav-links .btn-github:hover{ background:var(--teal-deep); color:var(--paper); }
+  .nav-toggle{ display:none; }
+
+  @media (max-width:760px){
+    .nav-links{
+      position:fixed; inset:64px 0 auto 0;
+      background:var(--paper);
+      flex-direction:column; align-items:flex-start;
+      gap:0;
+      border-bottom:1px solid var(--line);
+      transform:translateY(-140%);
+      transition:transform .25s ease;
+      padding:8px var(--gutter) 20px;
+    }
+    .nav-links.open{ transform:translateY(0); }
+    .nav-links li{ width:100%; border-top:1px solid var(--line); }
+    .nav-links a{ display:block; padding:14px 0; }
+    .nav-links .btn-github{ display:inline-block; margin-top:10px; }
+    .nav-toggle{
+      display:block;
+      background:none; border:1px solid var(--line);
+      border-radius:3px;
+      width:38px; height:34px;
+      font-family:var(--mono);
+      cursor:pointer;
+    }
+  }
+
+  /* ================= HERO ================= */
+  .hero{
+    padding-top:clamp(56px,9vw,96px);
+    padding-bottom:clamp(40px,7vw,72px);
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:clamp(28px,5vw,56px);
+    align-items:center;
+  }
+  @media (max-width:900px){ .hero-grid{ grid-template-columns:1fr; } }
+
+  .hero h1{
+    font-family:var(--display);
+    font-weight:500;
+    font-size:clamp(2.3rem, 4.6vw, 3.6rem);
+    line-height:1.06;
+    letter-spacing:-0.01em;
+    margin-bottom:22px;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--teal-deep);
+    font-weight:500;
+  }
+  .hero p.lede{
+    font-size:clamp(1rem, 1.6vw, 1.14rem);
+    color:var(--slate);
+    max-width:46ch;
+    margin-bottom:30px;
+  }
+  .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:8px; }
+  .btn{
+    font-family:var(--mono);
+    font-size:0.85rem;
+    letter-spacing:0.02em;
+    text-decoration:none;
+    padding:13px 22px;
+    border-radius:3px;
+    display:inline-flex; align-items:center; gap:9px;
+    transition:transform .16s ease, box-shadow .16s ease, background .16s ease;
+  }
+  .btn-primary{ background:var(--coral); color:#fff; }
+  .btn-primary:hover{ background:#c94a24; transform:translateY(-1px); }
+  .btn-ghost{ background:transparent; color:var(--ink); border:1px solid var(--ink); }
+  .btn-ghost:hover{ background:var(--ink); color:var(--paper); }
+
+  /* --- vitals panel (signature element) --- */
+  .vitals{
+    position:relative;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:22px 20px 18px;
+    box-shadow:0 1px 0 var(--line), 0 18px 40px -28px rgba(16,24,43,0.35);
+  }
+  .vitals-head{
+    display:flex; justify-content:space-between; align-items:baseline;
+    font-family:var(--mono); font-size:0.7rem; letter-spacing:0.1em;
+    text-transform:uppercase; color:var(--slate);
+    margin-bottom:6px;
+  }
+  .vitals-head span.live{ color:var(--teal); }
+  .vitals-head span.live::before{
+    content:"● "; color:var(--coral);
+  }
+  .pulse-wrap{ width:100%; height:64px; margin-bottom:6px; }
+  .pulse-wrap path{
+    fill:none; stroke:var(--teal); stroke-width:2;
+    stroke-linecap:round; stroke-linejoin:round;
+    stroke-dasharray:600;
+    stroke-dashoffset:600;
+    animation:draw 3.4s ease-in-out infinite;
+  }
+  @keyframes draw{
+    0%{ stroke-dashoffset:600; }
+    45%{ stroke-dashoffset:0; }
+    100%{ stroke-dashoffset:-600; }
+  }
+  .vitals-stats{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    border-radius:4px;
+    overflow:hidden;
+  }
+  .vitals-stats div{
+    background:var(--card);
+    padding:14px 14px 12px;
+  }
+  .vitals-stats .num{
+    font-family:var(--mono); font-weight:600;
+    font-size:1.5rem; color:var(--ink);
+    line-height:1;
+  }
+  .vitals-stats .num.flag{ color:var(--coral); }
+  .vitals-stats .lab{
+    font-family:var(--mono); font-size:0.66rem;
+    letter-spacing:0.06em; text-transform:uppercase;
+    color:var(--slate); margin-top:6px;
+  }
+  .vitals-foot{
+    font-family:var(--mono); font-size:0.68rem; color:var(--slate);
+    margin-top:12px; padding-top:12px; border-top:1px dashed var(--line);
+  }
+
+  /* ================= SECTION SHELL ================= */
+  section{ padding-top:clamp(52px,8vw,88px); padding-bottom:clamp(52px,8vw,88px); }
+  .section-head{ max-width:60ch; margin-bottom:clamp(30px,5vw,48px); }
+  .section-head h2{
+    font-family:var(--display);
+    font-weight:500;
+    font-size:clamp(1.7rem, 3vw, 2.3rem);
+    letter-spacing:-0.01em;
+  }
+  .section-head p{ color:var(--slate); margin-top:12px; font-size:1.02rem; }
+  .divider{
+    border:none; height:1px; background:var(--line); margin:0;
+  }
+
+  /* ================= FLAGSHIP PROJECT ================= */
+  .case{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:clamp(24px,4vw,44px);
+  }
+  .case-top{
+    display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap;
+    margin-bottom:22px;
+  }
+  .case-top h3{
+    font-family:var(--display);
+    font-weight:500;
+    font-size:clamp(1.4rem,2.6vw,1.9rem);
+    max-width:34ch;
+  }
+  .case-links{ display:flex; gap:12px; flex-wrap:wrap; align-self:flex-start; }
+  .case p.desc{ color:var(--slate); max-width:70ch; margin-bottom:22px; font-size:1.02rem; }
+
+  .tag-row{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:30px; }
+  .tag{
+    font-family:var(--mono); font-size:0.72rem;
+    border:1px solid var(--line);
+    padding:6px 11px;
+    border-radius:20px;
+    color:var(--ink-soft);
+    background:var(--paper);
+  }
+
+  .shot-grid{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    margin-bottom:28px;
+  }
+  .shot-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+  }
+  .shot{
+    border:1px solid var(--line);
+    border-radius:5px;
+    overflow:hidden;
+    background:var(--paper-deep);
+  }
+  .shot img{ width:100%; height:auto; display:block; }
+  .shot figcaption{
+    font-family:var(--mono); font-size:0.68rem;
+    color:var(--slate);
+    padding:9px 12px;
+    border-top:1px solid var(--line);
+    background:var(--card);
+  }
+  @media (max-width:760px){
+    .shot-row{ grid-template-columns:1fr; }
+  }
+
+  .finding{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:16px;
+    align-items:flex-start;
+    border-left:3px solid var(--coral);
+    background:var(--paper);
+    padding:18px 20px;
+    border-radius:0 5px 5px 0;
+  }
+  .finding .mark{
+    font-family:var(--mono); font-size:0.68rem; letter-spacing:0.08em;
+    color:var(--coral); text-transform:uppercase; white-space:nowrap;
+    padding-top:3px;
+  }
+  .finding p{ font-size:0.98rem; }
+  .finding p strong{ color:var(--ink); }
+
+  /* ================= PROCESS (dark) ================= */
+  .process{
+    background:var(--ink);
+    color:var(--paper);
+  }
+  .process .section-head p{ color:#B7BECC; }
+  .process-list{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+  }
+  .process-list li{
+    display:grid;
+    grid-template-columns:64px 1fr;
+    gap:20px;
+    padding:22px 0;
+    border-top:1px solid var(--line-dark);
+    align-items:baseline;
+  }
+  .process-list li:last-child{ border-bottom:1px solid var(--line-dark); }
+  .process-list .step-num{
+    font-family:var(--mono); font-size:0.85rem; color:#8FD1C7;
+  }
+  .process-list h4{
+    font-family:var(--body); font-weight:600; font-size:1.02rem;
+    margin-bottom:6px;
+  }
+  .process-list p{ color:#B7BECC; font-size:0.94rem; max-width:60ch; }
+
+  /* ================= SKILLS ================= */
+  .skill-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:16px;
+  }
+  @media (max-width:820px){ .skill-grid{ grid-template-columns:1fr; } }
+  .skill-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:22px 22px 20px;
+  }
+  .skill-card .eyebrow{ margin-bottom:14px; }
+  .skill-card ul{ list-style:none; }
+  .skill-card li{
+    font-family:var(--mono); font-size:0.86rem;
+    padding:8px 0;
+    border-top:1px solid var(--line);
+    display:flex; justify-content:space-between;
+  }
+  .skill-card li:first-of-type{ border-top:none; }
+  .skill-card li span.tier{ color:var(--slate); font-size:0.76rem; }
+
+  /* ================= CONTACT (dark) ================= */
+  .contact{
+    background:var(--ink);
+    color:var(--paper);
+  }
+  .contact-inner{
+    display:flex; justify-content:space-between; align-items:flex-end;
+    flex-wrap:wrap; gap:32px;
+  }
+  .contact h2{
+    font-family:var(--display); font-weight:500;
+    font-size:clamp(2rem,4.4vw,3.2rem);
+    max-width:14ch; line-height:1.05;
+  }
+  .contact-links{
+    display:flex; flex-direction:column; gap:10px;
+    font-family:var(--mono); font-size:0.95rem;
+  }
+  .contact-links a{
+    text-decoration:none; color:var(--paper);
+    border-bottom:1px solid var(--line-dark);
+    padding-bottom:2px;
+    transition:border-color .18s ease, color .18s ease;
+  }
+  .contact-links a:hover{ color:#8FD1C7; border-color:#8FD1C7; }
+
+  footer{
+    background:var(--ink);
+    color:#7C8496;
+    font-family:var(--mono); font-size:0.72rem;
+    padding:22px 0 30px;
+    border-top:1px solid var(--line-dark);
+  }
+  footer .wrap{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
+  }
+
+  .reveal{
+    opacity:0; transform:translateY(14px);
+    transition:opacity .6s ease, transform .6s ease;
+  }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="nav-mark">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M1 10H5L7.5 3L12 17L14.5 10H19" stroke="#E4572E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      IRENE_DATA_HUB
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" id="navToggle">≡</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <!-- EDIT: replace with your GitHub profile URL -->
+      <li><a class="btn-github" href="https://github.com/irene2024hub" target="_blank" rel="noopener">GitHub ↗</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">DATA SCIENTIST · HEALTHCARE ANALYTICS &amp; ML</p>
+        <h1>I turn screening data into decisions someone can <em>act on before</em> a crisis point.</h1>
+        <p class="lede">
+          I build full-stack analytics pipelines — SQL, Python, and Power BI —
+          that take raw clinical survey data and turn it into explainable,
+          production-ready risk models. My most recent work flags depression
+          risk in university students using validated psychological
+          instruments, deployed as a live web application.
+        </p>
+        <div class="hero-ctas">
+          <!-- EDIT: swap in your live app + GitHub links if this changes -->
+          <a class="btn btn-primary" href="https://depression-risk-app.onrender.com" target="_blank" rel="noopener">View live app →</a>
+          <a class="btn btn-ghost" href="https://github.com/irene2024hub/depression-risk-app" target="_blank" rel="noopener">View source code</a>
+        </div>
+      </div>
+
+      <div class="vitals" role="img" aria-label="Key project statistics: 1408 students analysed, 47.09 percent depression rate, 0.930 ROC-AUC, 154 severe cases flagged">
+        <div class="vitals-head">
+          <span>MONITOR — DEPRESSION_RISK_APP</span>
+          <span class="live">LIVE</span>
+        </div>
+        <svg class="pulse-wrap" viewBox="0 0 400 64" preserveAspectRatio="none">
+          <path d="M0 32 L60 32 L74 10 L88 54 L100 32 L140 32 L154 18 L168 46 L182 32 L400 32" />
+        </svg>
+        <div class="vitals-stats">
+          <div><div class="num">1,408</div><div class="lab">Students Analysed</div></div>
+          <div><div class="num flag">47.09%</div><div class="lab">Depression Rate</div></div>
+          <div><div class="num">0.930</div><div class="lab">Model ROC&#8209;AUC</div></div>
+          <div><div class="num flag">154</div><div class="lab">Severe Cases Flagged</div></div>
+        </div>
+        <div class="vitals-foot">Gradient Boosting · SHAP-explained · trained on Akram et al. (2023) UK student mental health data</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ================= FLAGSHIP PROJECT ================= -->
+  <section id="work">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">FLAGSHIP PROJECT</p>
+        <h2>Intelligent Depression Risk Prediction for University Student Wellbeing</h2>
+        <p>A full-stack data science approach integrating SQL analytics, Excel feature engineering, explainable machine learning, and executive Power BI reporting — deployed as a live, containerised web app.</p>
+      </div>
+
+      <div class="case reveal">
+        <div class="case-top">
+          <h3>From raw psychometric survey data to a deployed, explainable risk model.</h3>
+          <div class="case-links">
+            <a class="btn btn-primary" href="https://depression-risk-app.onrender.com" target="_blank" rel="noopener">Live app →</a>
+            <a class="btn btn-ghost" href="https://github.com/irene2024hub/depression-risk-app" target="_blank" rel="noopener">GitHub repo</a>
+          </div>
+        </div>
+
+        <p class="desc">
+          Nearly 1 in 2 students in the dataset screened positive for
+          clinically significant depression (PHQ-9 ≥ 10) — yet most
+          university wellbeing systems remain reactive. This project builds
+          the alternative: a leakage-audited machine learning pipeline
+          trained on 1,408 UK university students' validated screening
+          scores (PHQ-9, GAD-7, PSS, UCLA-3, SBQ-R, and more), explained
+          end-to-end with SHAP, and surfaced through a 3-page executive
+          Power BI dashboard for non-technical stakeholders.
+        </p>
+
+        <div class="tag-row">
+          <span class="tag">SQL Server</span>
+          <span class="tag">Microsoft Excel</span>
+          <span class="tag">Python / Pandas</span>
+          <span class="tag">Scikit-Learn</span>
+          <span class="tag">SHAP</span>
+          <span class="tag">Power BI · DAX</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Streamlit</span>
+        </div>
+
+        <div class="shot-grid">
+          <figure class="shot">
+            <img src="assets/dashboard_01_landing_page.png" alt="Power BI executive dashboard showing UK student mental health landscape report, with KPI cards for average depression score, total students, and depression rate percentage">
+            <figcaption>01 — Executive landing dashboard (Power BI)</figcaption>
+          </figure>
+          <div class="shot-row">
+            <figure class="shot">
+              <img src="assets/xai_02_shap_summary.png" alt="SHAP summary plot showing feature impact on depression prediction, with anxiety and insomnia as top contributors">
+              <figcaption>02 — SHAP explainability summary</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="assets/model_03_roc_curve.png" alt="ROC curve for the Gradient Boosting depression prediction model showing an AUC of 0.930">
+              <figcaption>03 — ROC curve, Gradient Boosting (AUC 0.930)</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="finding">
+          <span class="mark">Key finding</span>
+          <p><strong>Anxiety, stress, and loneliness</strong> — not demographic
+          factors like sex or course type — were the strongest predictors of
+          depression risk, confirmed independently across correlation
+          analysis, feature importance, and SHAP value distributions. That
+          reshapes where a university should target intervention resources.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ================= PROCESS ================= -->
+  <section id="process" class="process">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow on-dark">HOW THE PROJECT WAS BUILT</p>
+        <h2>Six stages, one pipeline.</h2>
+        <p>The actual sequence data moved through, from a raw CSV export to a live prediction served over Docker.</p>
+      </div>
+
+      <ol class="process-list reveal">
+        <li>
+          <span class="step-num">01</span>
+          <div>
+            <h4>SQL analysis</h4>
+            <p>19 diagnostic queries in SQL Server profiling prevalence, severity, and institutional risk using <code>TRY_CAST</code>-safe type coercion and composite risk scoring.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">02</span>
+          <div>
+            <h4>Excel feature engineering</h4>
+            <p>Clinically-labelled severity bands and NHS-aligned recommendations, built with nested logic and VLOOKUP for non-technical auditability.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">03</span>
+          <div>
+            <h4>Python &amp; machine learning</h4>
+            <p>Leakage-safe feature selection, five models benchmarked, and a Gradient Boosting classifier selected on ROC-AUC and recall — not raw accuracy.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">04</span>
+          <div>
+            <h4>Explainable AI</h4>
+            <p>SHAP summary and feature-importance analysis, confirming the model isn't relying on demographic proxies — a fairness signal, not just a performance one.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">05</span>
+          <div>
+            <h4>Power BI reporting</h4>
+            <p>A 3-page executive dashboard with advanced DAX (<code>CALCULATE</code>, <code>RANKX</code>, drill-through, row-level security) built for a university welfare manager, not a data analyst.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">06</span>
+          <div>
+            <h4>Deployment</h4>
+            <p>Model serialised with <code>joblib</code>, wrapped in a Streamlit app, containerised with Docker, and shipped as a live, publicly accessible prediction tool.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">TOOLKIT</p>
+        <h2>Skills, grouped the way I actually use them.</h2>
+      </div>
+
+      <div class="skill-grid reveal">
+        <div class="skill-card">
+          <p class="eyebrow">Data &amp; BI</p>
+          <ul>
+            <li>SQL Server (T-SQL) <span class="tier">daily</span></li>
+            <li>Power BI &amp; DAX <span class="tier">daily</span></li>
+            <li>Microsoft Excel <span class="tier">daily</span></li>
+            <li>Power Query <span class="tier">frequent</span></li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <p class="eyebrow">Machine Learning</p>
+          <ul>
+            <li>Python / Pandas / NumPy <span class="tier">daily</span></li>
+            <li>Scikit-Learn <span class="tier">frequent</span></li>
+            <li>SHAP (Explainable AI) <span class="tier">frequent</span></li>
+            <li>Statistical Analysis <span class="tier">frequent</span></li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <p class="eyebrow">Engineering &amp; Deployment</p>
+          <ul>
+            <li>Docker <span class="tier">frequent</span></li>
+            <li>Streamlit <span class="tier">frequent</span></li>
+            <li>Git &amp; GitHub <span class="tier">daily</span></li>
+            <li>Cloud Deployment <span class="tier">learning</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="contact">
+    <div class="wrap contact-inner">
+      <h2 class="reveal">Let's talk<br>about data.</h2>
+      <div class="contact-links reveal">
+        <a href="mailto:irenecollectionshub@gmail.com">irenecollectionshub@gmail.com</a>
+        <a href="https://www.linkedin.com/in/irene-ayakazi" target="_blank" rel="noopener">linkedin.com/in/irene-ayakazi</a>
+        <a href="https://github.com/irene2024hub" target="_blank" rel="noopener">github.com/irene2024hub</a>
+        <a href="https://tiktok.com/@data_queen_hub" target="_blank" rel="noopener">tiktok.com/@data_queen_hub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Irene Ufuoma Ayakazi — Data Scientist, Healthcare Analytics &amp; ML</span>
+    <span>Built with SQL, Python, Power BI, and a lot of TRY_CAST()</span>
+  </div>
+</footer>
+
+<script>
+  // mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  if(navToggle){
+    navToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }));
+  }
+
+  // scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>
